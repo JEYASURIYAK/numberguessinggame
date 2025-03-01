@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url(/public/bgimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container {
+  position: relative;
   align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.insidecontainer {
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  height: fit-content;
+  width: fit-content;
+  border: 2px solid white;
+  border-bottom-right-radius: 60px;
+  border-top-left-radius: 60px;
+  padding: 30px;
+  
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.insidecontainer h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  margin: 0;
+}
+
+.btncont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.inputcont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.inputcont input{
+  width: 80px;
+  height: 30px;
+  padding: 7px;
+  margin: 7px;
+  border: 2px slategray solid;
+  border-radius: 20px;
+}
+
+.insidecontainer button{
+  width: 50%;
+  height: 3rem;
+  outline: none;
+  margin: 10px;
+  border: 2px solid rgb(176, 171, 171);
+  border-radius: 5px;
+
+  
+}
+
+.insidecontainer button:hover{
+  border: none;
+}
+
+
+
+
+.inputcont input:focus{
+  background-color: rgb(236, 227, 216);
+  border:2px solid rgb(255, 255, 255) ;
+  border-radius: 2px;
+  outline: none;
 }
