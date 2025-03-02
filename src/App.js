@@ -1,18 +1,24 @@
 import './App.css';
 import React from 'react';
-import Results from './components/results';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Scored from './components/Score';
+import Home from './components/Home';
+import NotScored from './components/NotScored';
+
 
 
 function App() {
 
   return (
     <div className="App">
-      <div className="contanier">
-        <div className='insidecontainer'>
-          <h1>Guess the Number (1 to 10) </h1>
-          <Results />
-        </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/score' element={<Scored  />} />
+          <Route path='/notScore' element={<NotScored  />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
