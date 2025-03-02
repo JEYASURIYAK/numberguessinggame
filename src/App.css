@@ -26,7 +26,7 @@ body {
   left: 25%;
   top: 20%;
   background: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(18px);
   height: fit-content;
   width: fit-content;
   border: 2px solid white;
@@ -72,6 +72,13 @@ body {
   border-radius: 5px;
 
   
+}
+
+
+h5{
+  padding: 10px;
+  font-weight: 600;
+  margin: 0px;
 }
 
 .insidecontainer button:hover{

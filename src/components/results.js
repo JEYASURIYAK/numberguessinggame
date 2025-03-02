@@ -1,54 +1,69 @@
 import { useState } from 'react';
+import React from 'react';
+import Redirectpage from './redirectpage';
 
+// creating an random values 
 
+var randomNumber = Math.floor(Math.random() * 10) + 1;
 
-function Results(randomNumber) {
-
-    let result;
+function Results() {    
 
     // useStates for wrong options 
-    const [count, setcount] = useState('10');
-    const [userip,setUserip] = useState("");
+    const [count, setcount] = useState(10);
+    const [userip, setUserip] = useState();
+    const [Score, setScore] = useState(0);
+    const [result,setResult] = useState("");
 
 
     // Getting input values 
     const handleChange = (e) => {
-        setUserip(e.target.value);
+        setUserip(parseInt(e.target.value));
     }
 
 
     // function for checking 
 
     function Checking(){
-
         
-        if (userip){
-            if(userip < randomNumber){
-                result=`oops! Wrong It's Higher`;
-                setcount(count-1);
+        if (userip && count>0) {
+            if (userip === randomNumber) {
+                setResult('Congrats!! You Won!');
+                setScore(Score+1);
+                setcount(count - 1);
+                randomNumber = Math.floor(Math.random() * 10) + 1;
             }
-            else if(userip > randomNumber){
-                result=`oops! Wrong It's Lower`;
-                setcount(count-1);
+
+            else if (userip > randomNumber) {
+                setResult(`oops! Wrong It's Higher`);
+                setcount(count - 1);
             }
-            else if(userip ===randomNumber){
-                result=`Congrats!! You Won! `;
+            else if (userip < randomNumber) {
+                setResult(`oops! Wrong It's Lower`)
+                setcount(count - 1);
             }
-            else{
-                result='Please enter valid inputs';
+
+            else {
+                setResult(`Please enter valid inputs`);
             }
         }
+        
     }
 
     return (
         <>
-            <div className='inputcont'><input onChange={handleChange}></input></div>
+            <div className='inputcont'><input name='userip' onChange={handleChange}></input></div>
             <div className='btncont'>
                 <button className='Checkbtn' onClick={Checking}>Check</button>
-                <button className='Quitbtn'>Quit</button>
+                {/* <button className='Quitbtn'>Quit</button> */}
             </div>
-            <h5>Attempts remaining-{count}</h5>
-            <h5>{result}</h5>
+            <div className=''>
+            <h5>Attempts remaining-{count} {randomNumber}</h5>
+            <h5>Score : {Score}/10</h5>
+            </div>
+
+            <h5>you Guessed : {result}</h5>
+            {count===0 ? <Redirectpage/>:null}
+            
         </>
     );
 
