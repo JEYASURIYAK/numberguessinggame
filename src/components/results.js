@@ -56,7 +56,7 @@ function Results() {
                 {/* <button className='Quitbtn'>Quit</button> */}
             </div>
             <div className='resultcont'>
-            <h5>Attempts remaining-{count} {randomNumber}</h5>
+            <h5>Attempts remaining-{count} </h5>
             <h5>Score : {Score}/10</h5>
             </div>
 
