@@ -87,6 +87,10 @@ h5{
   margin: 0px;
 }
 
+.headresult{
+  margin-left: 10px;
+}
+
 .insidecontainer button:hover{
   border: none;
 }

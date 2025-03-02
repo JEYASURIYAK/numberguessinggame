@@ -60,7 +60,7 @@ function Results() {
             <h5>Score : {Score}/10</h5>
             </div>
 
-            <h5>you Guessed : {result}</h5>
+            <h5 className='headresult'>you Guessed : {result}</h5>
             
         </>
     );
