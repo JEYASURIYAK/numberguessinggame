@@ -62,7 +62,6 @@ function Results() {
             </div>
 
             <h5>you Guessed : {result}</h5>
-            {count===0 ? <Redirectpage/>:null}
             
         </>
     );
