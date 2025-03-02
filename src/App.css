@@ -74,6 +74,12 @@ body {
   
 }
 
+.resultcont{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 h5{
   padding: 10px;

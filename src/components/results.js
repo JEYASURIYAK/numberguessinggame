@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import React from 'react';
-import Redirectpage from './redirectpage';
 
 // creating an random values 
 
@@ -56,7 +55,7 @@ function Results() {
                 <button className='Checkbtn' onClick={Checking}>Check</button>
                 {/* <button className='Quitbtn'>Quit</button> */}
             </div>
-            <div className=''>
+            <div className='resultcont'>
             <h5>Attempts remaining-{count} {randomNumber}</h5>
             <h5>Score : {Score}/10</h5>
             </div>
