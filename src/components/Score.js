@@ -27,7 +27,7 @@ export default function Scored({Score,setScore}) {
     }
     return <>
         <div className='insidecontainer'>
-            <h1>Wow!! You Scored {Score} in the Game </h1>
+            <h1>Wow!! You Scored {Score}/10 in the Game </h1>
             <div className='btncont'>
                 <button onClick={Backpage} className='Quitbtn'>Back</button>
             </div>
