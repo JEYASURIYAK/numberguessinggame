@@ -8,8 +8,9 @@ import { useNavigate } from 'react-router-dom';
 var randomNumber = Math.floor(Math.random() * 10) + 1;
 
 
-function Results() {
+function Results({Score,setScore}) {
 
+    console.log(randomNumber);
     // let value=true;
 
     const navigate=useNavigate();
@@ -17,7 +18,7 @@ function Results() {
     // useStates for wrong options 
     const [count, setcount] = useState(10);
     const [userip, setUserip] = useState();
-    const [Score, setScore] = useState(0);
+    // const [Score, setScore] = useState(0);
     const [result, setResult] = useState("");
 
 
@@ -26,7 +27,7 @@ function Results() {
         setUserip(parseInt(e.target.value));
     }
 
-
+    //commit
     // function for checking 
 
     function Checking() {
